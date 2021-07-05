@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perangi Covid</title>
+  <link rel="stylesheet" href="./css/style-custom.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h3>Daftar Vaksin</h3>
+    </header>
+    <div class="table-wrapper">
+      <table class="table-users">
+        <tr>
+          <th>Nama Tempat</th>
+          <th>Alamat</th>
+          <th>Kota</th>
+          <th>Narahubung</th>
+          <th>Keterangan</th>
+          <th>Edit</th>
+        </tr>
+      </table>
+      <button class="btn btn-add">Tambah Data</button>
+    </div>
+    <!-- Add Modal -->
+    <div class="add-modal modal-wrapper">
+      <div class="modal">
+        <div class="modal-header"><h3>Tambah Data Baru</h3></div>
+        <div class="modal-body">
+          <form class="form" autocomplete="off">
+            <input type="text" name="NamaTempat" placeholder="Nama Tempat">
+            <input type="text" name="Alamat" placeholder="Alamat">
+            <input type="text" name="Kota" placeholder="Kota">
+            <input type="number" name="Narahubung" placeholder="Narahubung">
+            <input type="text" name="Keterangan" placeholder="Keterangan">
+            <button class="btn btn-modal">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="edit-modal modal-wrapper">
+      <div class="modal">
+        <div class="modal-header"><h3>Edit Data</h3></div>
+        <div class="modal-body">
+          <form class="form" autocomplete="off">
+            <input type="text" name="NamaTempat" placeholder="Nama Tempat">
+            <input type="text" name="Alamat" placeholder="Alamat">
+            <input type="text" name="Kota" placeholder="Kota">
+            <input type="number" name="Narahubung" placeholder="Narahubung">
+            <input type="text" name="Keterangan" placeholder="Keterangan">
+            <button class="btn btn-modal">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC47I4uKuetEJG-cFvfaTaCvruX_0QAR5g",
+    authDomain: "perangicovid-b2e70.firebaseapp.com",
+    databaseURL: "https://perangicovid-b2e70-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "perangicovid-b2e70",
+    storageBucket: "perangicovid-b2e70.appspot.com",
+    messagingSenderId: "679010018812",
+    appId: "1:679010018812:web:0da7b01e909258c18e3e79"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+<script src="./js/script-custom.js"></script>
+</body>
+</html>
